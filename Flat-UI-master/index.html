@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html  ng-app="app" >
+  <head>
+    <meta charset="utf-8">
+    <title>Flat UI Free</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body ng-controller="myCtrl">
+  
+    <div class="container">
+        
+          <button ng-click="page=1" >Menu1</button>
+          <button ng-click="page=2" >Menu2</button>
+          <button ng-click="page=3" >Menu3</button>
+          <!---page1-->
+          <div ng-show="page==1">
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="btn btn-block btn-lg btn-primary">
+
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="btn">
+                  <button class="btn btn-hg btn-primary" ng-click="login()">
+                    Facebook-Login
+                  </button>
+
+                </div>
+              </div>
+            </div>            
+          </div>
+          <!---page2-->
+          <div ng-show="page==2">
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="btn btn-block btn-lg btn-primary">
+
+                </div>
+              </div>
+              <div class="col-xs-6" >
+                 อายุ
+                <label class="radio" ng-click="age(15)"  >
+                  <input type="radio" name="group1" value="1" data-toggle="radio" checked>
+                  15
+                  
+                </label>
+
+                <label class="radio" ng-click="age(20)" >
+                  <input type="radio" name="group1"   data-toggle="radio" checked>
+                  20
+                </label>
+
+                <label class="radio" ng-click="age(30)">
+                  <input type="radio" name="group1"  data-toggle="radio" checked>
+                  30
+                </label>
+
+                <label class="radio" ng-click="age(40)">
+                  <input type="radio" name="group1"   data-toggle="radio" checked>
+                  40
+                </label>
+    
+                เพศ
+                <label class="radio" ng-click="sex('man')">
+                  <input type="radio" name="group2"   data-toggle="radio">
+                   ชาย
+                </label>
+
+                <label class="radio" ng-click="sex('women')">
+                  <input type="radio" name="group2"  data-toggle="radio" checked>
+                  หญิง
+                </label>
+                
+                <br>
+                <button class="btn btn-default btn-wide"  ng-click="insert(numAge,strSex)">Save</button>
+                
+              </div>
+            </div>
+          </div>
+
+          <!---page3-->
+          <div ng-show="page==3">
+             <div class="row">
+              <div class="col-xs-6">
+                <div class="btn btn-block btn-lg btn-primary">
+
+                </div>
+              </div>
+              <div class="col-xs-6">          
+                   <h1 class="demo-headline">Thank you...</h1>            
+              </div>
+            </div>           
+          </div>
+       
+    </div>
+    <!-- /.container -->
+
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script> <!-- parse -->
+    <!-- Load JS here for greater good =============================-->
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script> <!-- parse -->
+    <script src="http://connect.facebook.net/en_US/all.js"></script> <!-- facebook js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+    <script src="ng.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+  </body>
+</html>
